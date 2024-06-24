@@ -326,7 +326,7 @@ footer p {
   }
   main {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
@@ -378,7 +378,6 @@ footer p {
     font-size: 15px;
   }
 }
-
 
 /* Tablet */
 @media (max-width: 768px) {
@@ -446,6 +445,23 @@ footer p {
 
   .check-khodam p {
     font-size: 18px;
+  }
+
+  form input {
+    font-size: 15px;
+    padding: 3px;
+    border-radius: 10px;
+  }
+
+  form .btn-search {
+    padding: 3px;
+    border-radius: 15px;
+    margin-top: 10px;
+  }
+
+  .khodam-img {
+    width: 100px;
+    height: 100px;
   }
 
   .main-profile {
