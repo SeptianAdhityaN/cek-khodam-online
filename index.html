@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Cek Khodam Kiyowo</title>
+</head>
+<body>
+  <!-- HEADER START -->
+  <header>
+    <nav id="navbar">
+      <div class="navbar-content">
+        <h2><a class="logo" href="#">MbahAsep<span>.</span></a></h2>
+        <ul>
+          <li><a href="#check">Check</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#profile">Profile</a></li>
+        </ul>
+        <a href="https://www.instagram.com/septianadhty?igsh=MTR6NXgxbjJxaGNw" target="_blank" class="action-btn">Contact</a>
+        <div class="toggle-btn"><ion-icon id="toggle.btn" name="menu-outline" onclick="Menu(this)"></ion-icon></div>
+      </div>
+
+      <div class="dropdown-menu">
+        <ul>
+          <li><a href="#check">Check</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="https://www.instagram.com/septianadhty?igsh=MTR6NXgxbjJxaGNw" target="_blank" class="action-btn">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- HEADER END -->
+
+  <!-- MAIN START -->
+  <main id="check">
+    <!-- ARTICLE START -->
+    <div class="main-content">
+      <article>
+        <div class="check-khodam">
+          <h2>Cek Khodam Online</h2>
+          <img id="khodam-img" src="img/default.png" alt="">
+          <form id="khodam-form" onsubmit="return generateKhodam()">
+            <input type="text" id="search" placeholder="Masukkan Namamu">
+            <button id="btn-search" class="btn-search"><p>Check</p></button>
+            <p id="result" class="result">Khodam Kamu adalah ...</p>
+            <p id="description" class="description"></p>
+          </form>
+        </div>
+      </article>
+
+      <article id="skills">
+        <div class="skills-content">
+          <h2>Skills</h2>
+          <div class="skills">
+            <div class="card">
+              <img src="img/cek_khodam.png" alt="Cek Khodam Online">
+              <h3>Cek Khodam Online</h3>
+            </div>
+            <div class="card">
+              <img src="img/santet_online.png" alt="Santet Online">
+              <h3>Santet Online</h3>
+            </div>
+            <div class="card">
+              <img src="img/pelet_online.png" alt="Pelet Online">
+              <h3>Pelet Online</h3>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- ARTICLE END -->
+
+    <!-- ASIDE START -->
+    <aside id="profile">
+      <div class="main-profile">
+        <h2>Profile</h2>
+        <img src="img/profile.png" alt="">
+        <div class="data-profile">
+          <p>Nama     : Mbah Asep</p>
+          <p>Intansi  : Universitas Indonesia</p>
+          <p>Fakultas : Sihir</p>
+          <p>Prodi    : S3 Ilmu Dukun</p>
+          <p>Tahun    : 2023</p>
+        </div>
+      </div>
+    </aside>
+  <!-- ASIDE END -->
+  </main>
+  <!-- MAIN END -->
+
+
+
+  <!-- FOOTER START -->
+  <footer>
+    <p>&copy; 2024 septianadhty All rights reserved.</p>
+  </footer>
+  <!-- FOOTER END -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
