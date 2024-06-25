@@ -307,11 +307,11 @@ margin: 20px auto;
   margin-bottom: 10px;
 }
 
-#skills {
+#service {
   margin-top: 200px;
 }
 
-.skills-content {
+.service-content {
   width: 100%;
   margin-top: 50px;
   display: flex;
@@ -321,19 +321,19 @@ margin: 20px auto;
   margin-bottom: 200px;
 }
 
-.skills-content h2 {
+.service-content h2 {
   font-size: 30px;
   margin-bottom: 10px;
 }
 
-.skills {
+.service {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.skills h2 {
+.service h2 {
   font-size: 30px;
   margin-bottom: 20px;
 }
