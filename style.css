@@ -144,6 +144,75 @@ main {
   flex-direction: column;
 }
 
+.main-content h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.star{
+  font-size: 8px;
+  margin-top: -50px;
+  margin-bottom: 30px;
+}
+
+.star span {
+  font-size: 16px;
+}
+
+#khodam-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#loading {
+  font-size: 15px;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 27%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  animation: moveUpDown 0.5s infinite alternate;
+  z-index: 3;
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 100px;
+}
+
+#loading .star {
+  animation: fadeInOut 1s infinite alternate, zoomIn 0.5s infinite alternate;
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(3);
+  }
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
 .check-khodam {
   margin-left: 20px;
   background-color: rgba(255, 255, 255, .15);
@@ -152,22 +221,14 @@ main {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  padding: 40PX;
+  padding: 10PX;
   box-shadow: 3px 3px 10px #000;
 }
 
-.check-khodam h2 {
-  font-size: 30px;
-}
-
 .check-khodam img {
-  width: 200px;
-  height: 200px;
-  margin: 20px;
-}
-
-.check-khodam p {
-  font-size: 20px;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
 }
 
 form {
@@ -175,7 +236,8 @@ form {
 }
 
 form input {
-  font-size: 20px;
+  margin-top: 20px;
+  font-size: 16px;
   padding: 5px;
   color: #000;
   border-radius: 10px;
@@ -193,6 +255,8 @@ form .btn-search {
   background-color: #9B3922;
   margin-left: 5px;
   box-shadow: 2px 2px 3px #000;
+  cursor: pointer;
+  margin-top: 15px;
 }
 
 .btn-search p {
@@ -216,7 +280,6 @@ form .btn-search {
   background-color: rgba(255, 255, 255, .15);
   border-radius: 10px;
   top: 150px;
-  /* margin-top: 200px; */
   margin-left: 20px;
   margin-right: 20px;
   width: 25%;
@@ -348,6 +411,10 @@ footer p {
     margin-top: 20px;
   }
 
+  #loading {
+    left: 33%;
+  }
+
   .check-khodam {
     width: 95%;
   }
@@ -407,6 +474,10 @@ footer p {
     display: block;
   }
 
+  #loading {
+    left: 25%;
+  }
+
   .check-khodam {
     width: 90%;
     padding-right: 20px;
@@ -431,6 +502,10 @@ footer p {
 @media (max-width: 450px) {
   html {
       font-size: 55%;
+  }
+
+  #loading {
+    left: 15%;
   }
 
   .check-khodam {
