@@ -234,13 +234,13 @@ form {
 }
 
 form input {
+  background-color: rgba(0, 0, 0, 0.2);
   margin-top: 20px;
   font-size: 16px;
   padding: 5px;
-  color: #000;
   border-radius: 10px;
   border-style: none;
-  outline: none;
+  outline: 1px #fff solid;
   text-align: center;
   text-decoration: none;
 }
