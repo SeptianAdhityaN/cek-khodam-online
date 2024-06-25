@@ -85,18 +85,54 @@ const khodamList = [
     "Burung Hantu Putih": "Orang yang memiliki khodam Burung Hantu Putih berwatak cerdas dan penuh misteri, dengan kemampuan melihat hal-hal tersembunyi.",
   };
 
-  function generateKhodam() {
-    const name = document.getElementById("search").value.trim();
-    if (name === "") {
-      alert("Masukkan namamu terlebih dahulu!");
-      return false;
+  const SAVED_USER = 'savedKhodams';
+
+  function generateKhodam(name) {
+    let savedKhodams;
+    try {
+      savedKhodams = JSON.parse(localStorage.getItem(SAVED_USER)) || {};
+    } catch (e) {
+      savedKhodams = {};
     }
-    
-    const randomIndex = Math.floor(Math.random() * khodamList.length);
-    const khodam = khodamList[randomIndex];
-    
-    document.getElementById("result").innerText = `Khodam Kamu adalah ${khodam}`;
-    document.getElementById("khodam-img").src = `img/${khodam.toLowerCase().replace(' ', '_')}.png`;
-    document.getElementById("description").innerText = khodamDescriptions[khodam];
-    return false;
+  
+    if (savedKhodams[name]) {
+      return savedKhodams[name];
+    } else {
+      let randomKhodam = khodamList[Math.floor(Math.random() * khodamList.length)];
+      savedKhodams[name] = randomKhodam;
+      localStorage.setItem(SAVED_USER, JSON.stringify(savedKhodams));
+      return randomKhodam;
+    }
   }
+  
+  document.getElementById('btn-search').addEventListener('click', function (event) {
+    event.preventDefault();
+    const name = document.getElementById('search').value.trim();
+    const form = document.getElementById('check-khodam');
+    const loading = document.getElementById('loading');
+    const result = document.getElementById('result');
+  
+    if (name) {
+      form.style.filter = 'blur(10px)';
+      form.style.backgroundColor = 'rgba(0, 0, 0, .5)';
+      loading.style.display = 'block';
+      // result.innerText = '';
+  
+      setTimeout(() => {
+        const khodam = generateKhodam(name);
+        const description = khodamDescriptions[khodam] || "Deskripsi tidak tersedia.";
+        
+        loading.style.display = 'none';
+        form.style.filter = 'none';
+        form.style.backgroundColor = 'rgba(255, 255, 255, .15)';
+  
+        result.innerText = `${name} memiliki khodam ${khodam}. ${description}`;
+        document.getElementById('khodam-img').src = `img/${khodam.toLowerCase().replace(' ', '_')}.png`;
+      }, 5000);
+    } else {
+      alert('Masukkan nama terlebih dahulu!');
+    }
+  });
+  
+  
+  
