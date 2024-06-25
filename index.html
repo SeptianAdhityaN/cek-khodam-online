@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>Cek Khodam Kiyowo</title>
+  <title>♥ Cek Khodam Kiyowo ♥</title>
 </head>
 <body>
   <!-- HEADER START -->
@@ -40,12 +40,16 @@
   <main id="check">
     <!-- ARTICLE START -->
     <div class="main-content">
+      <h2>Cek Khodam Online</h2>
+      <div id="loading">
+        <p class="star">✨<span>✨</span>✨</p>
+        <p>Sedang memeriksa khodam anda..</p>
+      </div>
       <article>
-        <div class="check-khodam">
-          <h2>Cek Khodam Online</h2>
-          <img id="khodam-img" src="img/default.png" alt="">
+        <div id="check-khodam" class="check-khodam">
           <form id="khodam-form" onsubmit="return generateKhodam()">
-            <input type="text" id="search" placeholder="Masukkan Namamu">
+            <img id="khodam-img" src="img/default.png" alt="">
+            <input type="text" id="search" placeholder="Masukkan namamu">
             <button id="btn-search" class="btn-search"><p>Check</p></button>
             <p id="result" class="result">Khodam Kamu adalah ...</p>
             <p id="description" class="description"></p>
@@ -57,18 +61,18 @@
         <div class="skills-content">
           <h2>Skills</h2>
           <div class="skills">
-            <div class="card">
+            <a href="#" class="card">
               <img src="img/cek_khodam.png" alt="Cek Khodam Online">
               <h3>Cek Khodam Online</h3>
-            </div>
-            <div class="card">
+            </a>
+            <a href="#" class="card">
               <img src="img/santet_online.png" alt="Santet Online">
               <h3>Santet Online</h3>
-            </div>
-            <div class="card">
+            </a>
+            <a href="#" class="card">
               <img src="img/pelet_online.png" alt="Pelet Online">
               <h3>Pelet Online</h3>
-            </div>
+            </a>
           </div>
         </div>
       </article>
