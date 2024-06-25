@@ -149,16 +149,6 @@ main {
   margin-bottom: 20px;
 }
 
-.star{
-  font-size: 8px;
-  margin-top: -50px;
-  margin-bottom: 30px;
-}
-
-.star span {
-  font-size: 16px;
-}
-
 #khodam-form {
   display: flex;
   flex-direction: column;
@@ -182,16 +172,24 @@ main {
   min-width: 100px;
 }
 
-#loading .star {
+#loading img {
+  width: 100px;
+  height: 100px;
+  margin-top: -70px;
+  margin-bottom: 10px;
   animation: fadeInOut 1s infinite alternate, zoomIn 0.5s infinite alternate;
+}
+
+#loading p {
+  text-shadow: 2px 3px #000;
 }
 
 @keyframes zoomIn {
   0% {
-    transform: scale(0);
+    transform: scale(0.5);
   }
   100% {
-    transform: scale(3);
+    transform: scale(1.5);
   }
 }
 
