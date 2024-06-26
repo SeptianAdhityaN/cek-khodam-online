@@ -130,9 +130,26 @@ const khodamList = [
         document.getElementById('khodam-img').src = `img/${khodam.toLowerCase().replace(' ', '_')}.png`;
       }, 5000);
     } else {
-      alert('Masukkan nama terlebih dahulu!');
+      popup();
     }
   });
   
+  function popup (){
+    const popup = document.getElementById('popup');
+    popup.classList.add('open-popup');
   
+    const headMessage = document.getElementById('head-message');
+    headMessage.innerText = 'Error!';
+  
+    const image = document.getElementById('img-popup');
+    image.src = 'img/error.png';
+  
+    const message = document.getElementById('message');
+    message.innerText = `Masukkan nama anda terlebih dahulu !`
+  
+    const popupButton = document.getElementById('popup-btn')
+    popupButton.addEventListener('click', function(){
+      popup.classList.remove('open-popup');
+    });
+  }
   
