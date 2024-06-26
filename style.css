@@ -250,7 +250,7 @@ form .btn-search {
   border-radius: 15px;
   outline: none;
   border-style: none;
-  background-color: #9B3922;
+  background-image: linear-gradient(to bottom, #9B3922, #481E14 100%);
   margin-left: 5px;
   box-shadow: 2px 2px 3px #000;
   cursor: pointer;
